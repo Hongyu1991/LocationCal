@@ -7,4 +7,10 @@ public class Point {
 		this.x = x;
 		this.y = y;
 	}
+	
+	@Override 
+	public String toString() {
+		String result = "The Point is " + "(" + x + ", " + y + ") ";
+		return result;
+	}
 }

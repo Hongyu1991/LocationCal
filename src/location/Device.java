@@ -2,9 +2,9 @@ package location;
 
 public class Device {
 	private int index;
-	private double x;
-	private double y;
-	public double distance = 0;
+	public double x;
+	public double y;
+	public double dis = 0;
 	
 	public int getIndex() {
 		return index;
@@ -35,10 +35,20 @@ public class Device {
 		this.y = y;
 	}
 	
+	@Override 
+	public String toString() {
+		String result = "The device location is " + "(" + x + ", " + y + ") ";
+		return result;
+	}
+	
+	
+	
 	public double distance() {
 		//return the distance between signal and the device. 
-		distance = 1.0;
-		return distance;
+		double x1 = 2.6;
+		double y1 = 3;
+		dis = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
+		return dis;
 	}
 	
 }
